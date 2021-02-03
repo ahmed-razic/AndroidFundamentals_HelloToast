@@ -15,7 +15,8 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="showToast"/>
 
     <Button
         android:id="@+id/button_count"
@@ -26,15 +27,17 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="countUp"/>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/show_count"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#FFFF00"
         android:gravity="center"
         android:text="@string/initial_count_value"
+        android:textAlignment="center"
         android:textColor="@color/purple_500"
         android:textSize="160sp"
         android:textStyle="bold"
