@@ -2,6 +2,7 @@ package com.example.android.androidfundamentals;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -28,15 +29,17 @@ public class MainActivity extends AppCompatActivity {
         Log.e("MainActivity", "This is a W message");
     }
 
-    public void showToast(View view) {
-        Toast toast = Toast.makeText(this, R.string.toast_message, Toast.LENGTH_LONG);
-        toast.show();
+    public void showHello(View view) {
+
+        Intent intent = new Intent(this, SecondActivity.class);
+        intent.putExtra("KEY", mCount);
+        startActivity(intent);
     }
 
     public void countUp(View view) {
         mCount++;
         if(view != null){
-            mShowCount.setText(Integer.toString(mCount));
+            mShowCount.setText(String.valueOf(mCount));
         }
     }
 }
